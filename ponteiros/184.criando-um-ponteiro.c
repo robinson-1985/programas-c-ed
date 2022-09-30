@@ -5,8 +5,6 @@
 
           Aula 184: O que é e como criar um ponteiro?
 
-          Código escrito por Wagner Gaspar
-          Maior de 2021
 */
 
 int main(){
