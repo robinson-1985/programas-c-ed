@@ -1,12 +1,10 @@
 /*
 
-            Código escrito por Wagner Gaspar
-            Julho de 2021
+    Aula 231: Como descobrir se uma expressão matemática está mal formada?
 
-            Aula 231: Como descobrir se uma expressão matemática está mal formada?
-
-            3 * [(5 - 2) / 5]
-            3 * (5 - 2) / 5] <-- ao testar com esta expressão o programa trava. Descobriu o motivo?
+    3 * [(5 - 2) / 5]
+    3 * (5 - 2) / 5] <-- ao testar com esta expressão o programa trava. Descobriu o motivo?
+    
 */
 
 # include <stdio.h>
