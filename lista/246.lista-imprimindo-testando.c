@@ -12,20 +12,20 @@ typedef struct no{
 }No;
 
 // procedimento para inserir no início
-void inserir_no_inicio(No **lista, int num) {
+void inserir_no_inicio(No **lista, int num){
     No *novo = malloc(sizeof(No));
 
     if(novo){
         novo->valor = num;
-        novo->proximo = lista; // o novo nó está apontando para o início da lista. 
+        novo->proximo = *lista;
         *lista = novo;
     }
     else
-        printf("Erro ao alocar memória!\n");
+        printf("Erro ao alocar memoria!\n");
 }
 
-// procedimento para inserir no fim da lista
-void inserir_no_fim(No **lista, int num) {
+// procedimento para inserir no fim
+void inserir_no_fim(No **lista, int num){
     No *aux, *novo = malloc(sizeof(No));
 
     if(novo){
@@ -41,10 +41,9 @@ void inserir_no_fim(No **lista, int num) {
                 aux = aux->proximo;
             aux->proximo = novo;
         }
-        
     }
     else
-        printf("Erro ao alocar memória! \n");
+        printf("Erro ao alocar memoria!\n");
 }
 
 // procedimento para inserir no meio
@@ -66,15 +65,14 @@ void inserir_no_meio(No **lista, int num, int ant){
             aux->proximo = novo;
         }
     }
-
     else
-        printf("Erro ao alocar memória! \n");
+        printf("Erro ao alocar memoria!\n");
 }
 
 void imprimir(No *no){
     printf("\n\tLista: ");
     while(no){
-        printf("%d", no->valor);
+        printf("%d ", no->valor);
         no = no->proximo;
     }
     printf("\n\n");
